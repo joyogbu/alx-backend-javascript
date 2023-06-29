@@ -1,3 +1,3 @@
 export default function createEmployeesObject(departmentName, employees) {
-  return `{yes}`;
+  return `{ ${departmentName}: [ '${[employees.join(', ')]}' ] }`;
 }
