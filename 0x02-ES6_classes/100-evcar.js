@@ -10,6 +10,7 @@ export default class EVCar extends Car {
   }
 
   cloneCar() {
-    return Object.create(Car.prototype);
+    this.clone = Object.create(Car.prototype);
+    return this.clone;
   }
 }
