@@ -5,7 +5,7 @@ export default function createEmployeesObject(departmentName, employees) {
   // return obj;
   const obj = {};
   const arr = [];
-  for (const x of employees) {
+  for (let x of employees) {
     arr.push(x);
   }
   obj[`${departmentName}`] = arr;
