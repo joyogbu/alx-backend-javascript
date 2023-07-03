@@ -1,8 +1,9 @@
 export default function createIteratorObject(report) {
 	for (let key of Object.keys(report)) {
 		//if (report.hasOwnProperty(key)) {
-		//return [`${[key]}`];
-		return [`${report[key]}`];
+		return [`${[key]}`];
+		//return [`${value}`];
+		//return [`${report[key]}`];
 	}
 	//}*/
 /*	Object.entries(report).forEach(([key,value]) => {
