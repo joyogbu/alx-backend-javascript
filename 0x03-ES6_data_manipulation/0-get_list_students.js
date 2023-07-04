@@ -1,16 +1,16 @@
 export default function getListStudents() {
-	myArray = [];
-	myObject = {
+	let myArray = [];
+	let myObject = {
 		 id: 1,
 		 firstName: 'Guillaume', 
 		 location: 'San Francisco'
 	}
-	myObject2 = {
+	let myObject2 = {
 		id: 2,
 		firstName: 'James',
 		location: 'Columbia'
 	}
-	myObject3 = {
+	let myObject3 = {
 		id: 2,
 		firstName: 'James',
 		location: 'Columbia'
@@ -19,3 +19,4 @@ export default function getListStudents() {
 	myArray.push(myObject2);
 	myArray.push(myObject3);
 	return (myArray);
+}
