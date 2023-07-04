@@ -1,8 +1,9 @@
 export default function getListStudentIds(arg) {
-  let empty = [];
-  if (typeof(arg) != 'array') {
+  let arg2 = arg;
+  const empty = [];
+  if (typeof (arg2) != 'array') {
     return empty;
   }
-  let result = arg.map(({id}) => id)
+  const result = Object.keys(arg2).map((elem) => `${elem}`);
   return (result);
 }
