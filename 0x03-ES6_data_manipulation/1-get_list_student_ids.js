@@ -1,14 +1,12 @@
-export default function getListStudentIds(arg) {
-  let arg2 = [];
-  arg2.push(arg);
+export default function getListStudentIds(arg1) {
+  const arg2 = [];
+  arg2.push(arg1);
   const empty = [];
-  if (typeof (arg2) != 'array') {
+  const val = Array.isArray(arg1);
+  if (val === 'false') {
+  // if (typeof arg2 !== 'array') {
     return empty;
   }
-  let result = arg2.map(({id}) => {
-  //const result = Object.keys(arg2).map(elem => {
-	  return `${arg[id]}`;
-	  //return `${id}`;
-  });
+  const result = arg2.map((elem) => elem.id);
   return (result);
 }

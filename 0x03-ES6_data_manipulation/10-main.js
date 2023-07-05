@@ -5,5 +5,6 @@ const map = groceriesList();
 console.log(map);
 
 updateUniqueItems(map)
+updateUniqueItems("hello");
 console.log(map);
 
