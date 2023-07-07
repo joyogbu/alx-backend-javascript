@@ -1,4 +1,5 @@
 export default function getStudentIdsSum(arg1) {
-  const result = arg1.reduce((a, b) => ((a + b, 0)));
+  let result = arg1.reduce(function(a, b) {
+	return(a + b); }, 0);
   return result;
 }
