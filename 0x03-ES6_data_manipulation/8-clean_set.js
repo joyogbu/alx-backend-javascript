@@ -10,5 +10,3 @@ export default function cleanSet(set, start) {
   // for (let item of newSet) {
   return (newSet).toString().replace(/,/g, '-');
 }
-
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
