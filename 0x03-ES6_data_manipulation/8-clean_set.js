@@ -1,7 +1,7 @@
 export default function cleanSet(set, start) {
   // let newSet = new Set();
   const newSet = [];
-  if (start === '') {
+  if (start === '' || typeof start !== 'string') {
     return ('');
   }
   for (const elem of set) {
