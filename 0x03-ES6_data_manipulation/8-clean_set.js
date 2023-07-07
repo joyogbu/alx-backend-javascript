@@ -5,7 +5,7 @@ export default function cleanSet(set, start) {
     return ('');
   }
   for (const elem of set) {
-    if (elem.startsWith(start)) {
+    if (typeof elem !== 'undefined' && elem.startsWith(start)) {
       const newElem = elem.replace(start, '');
       newSet.push(newElem);
     }
