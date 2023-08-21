@@ -1,4 +1,4 @@
-const displayMessage = function(arg) {
-	console.log(arg)
-}
-module.exports = displayMessage
+const displayMessage = function displayMessage(arg) {
+  console.log(arg);
+};
+module.exports = displayMessage;
