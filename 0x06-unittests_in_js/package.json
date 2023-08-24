@@ -1,0 +1,26 @@
+{
+  "name": "0x06-unittests_in_js",
+  "version": "1.0.0",
+  "description": "My first Unittests with mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDepencies": {
+    "chai": "^4.2.1",
+    "mocha": "^7.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/joyogbu/alx-backend-javascript.git"
+  },
+  "keywords": [
+    "unitest",
+    "node js"
+  ],
+  "author": "Joy Ogbu",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.2.0"
+  }
+}
