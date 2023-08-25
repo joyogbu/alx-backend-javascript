@@ -1,6 +1,6 @@
 const assert = require('assert');
 const expect = require('chai').expect;
-const calculateNumber = require("./1-calcul.js");
+const calculateNumber = require("./2-calcul_chai.js");
 describe('calculateNumber', function () {
 	it("compare sumz", function() {
 		//const calculateNumber = require("./0-calcul.js");
