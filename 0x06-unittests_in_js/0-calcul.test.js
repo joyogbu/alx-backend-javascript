@@ -9,7 +9,7 @@ describe('calculateNumber', function () {
 		assert.equal(calculateNumber(1, 3.7), 5)
 	});
 	it("compare another float", function () {
-		assert.equal(calculateNumber(1.2, 3.4), 5)
+		assert.equal(calculateNumber(1.2, 3.4), 4)
 	});
 	it("compare another float", function () {
                 assert.equal(calculateNumber(2.5, 3.2), 6)
