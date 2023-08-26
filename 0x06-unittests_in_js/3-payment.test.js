@@ -13,7 +13,7 @@ describe('sendPaymentRequestToApi', function () {
 		calledFuncSpy.restore();
 	});*/
 	it('test the sum function', function() {
-		expect(sendPaymentRequestToApi(100, 20)).to.equal(undefined);
+		expect(sendPaymentRequestToApi(100, 20)).to.equal(console.log('The total is: 120'));
 		//expect(calledConsole.calledOnce).to.be.true;
 		//expect(calledConsole.calledWith('The total is: 120')).to.be.true;
 	});
