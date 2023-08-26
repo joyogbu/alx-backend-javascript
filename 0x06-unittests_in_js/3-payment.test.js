@@ -4,17 +4,22 @@ const Utils = require("./utils.js");
 const sendPaymentRequestToApi = require('./3-payment.js');
 describe('sendPaymentRequestToApi', function () {
 	let calledFuncSpy;
+	let calledConsole;
 	beforeEach(function() {
 		calledFuncSpy = sinon.spy(Utils);
+		calledConsole = sinon.spy(console, 'log')
 	});
 	/*afterEach(function() {
 		calledFuncSpy.restore();
 	});*/
 	it('test the sum function', function() {
-		expect(sendPaymentRequestToApi(6, 1)).to.equal('The total is: 7');
+		sendPaymentRequestToApi(6, 1);
+		expect(calledConsole.calledOnce).to.be.true;
+		expect(calledConsole.calledWith('The total is: 7')).to.be.true;
 	});
 	afterEach(function() {
 		calledFuncSpy.calculateNumber.restore();
+		calledConsole.restore();
         });
 });
 	
