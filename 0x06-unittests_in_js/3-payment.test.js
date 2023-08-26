@@ -13,9 +13,9 @@ describe('sendPaymentRequestToApi', function () {
 		calledFuncSpy.restore();
 	});*/
 	it('test the sum function', function() {
-		sendPaymentRequestToApi(6, 1);
+		expect(sendPaymentRequestToApi(100, 20)).to.equal(undefined);
 		expect(calledConsole.calledOnce).to.be.true;
-		expect(calledConsole.calledWith('The total is: 7')).to.be.true;
+		expect(calledConsole.calledWith('The total is: 120')).to.be.true;
 	});
 	afterEach(function() {
 		calledFuncSpy.calculateNumber.restore();
