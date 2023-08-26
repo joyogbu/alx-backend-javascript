@@ -1,7 +1,8 @@
 const getPaymentTokenFromAPI = function (success) {
+	obj = {data: 'Successful response from the API'}
 	if (success == true) {
-		Promise.resolve('{data: "Successful response from the API"}').then((value) => { console.log(value);
-	});
+		return (obj.data);
+	
 	}else {
 		return
 	}
