@@ -62,8 +62,9 @@ fs.createReadStream(path, { encoding: 'utf-8' })
 	  //console.log(elements)
 	 for (const i in elements) {
 	 const fnames=elements[i].map(it => it.firstname)
-    process.stdout.write(`Number of students in ${i}: ${elements[i].length}. `)
-		 console.log(`List: ${fnames.join(', ')}`)
+    const res = `${fnames.join(', ')}`
+	console.log(`Number of students in ${i}: ${elements[i].length}. List: ${res}`);
+		 //console.log(`List: ${fnames.join(', ')}`)
 	 }
 
   });
