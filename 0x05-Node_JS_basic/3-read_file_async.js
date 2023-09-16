@@ -5,7 +5,7 @@ const countStudents = (path) => {
 	return new Promise((resolve, reject) => {
 		
   let output;
-  //if (fs.existsSync(path)) {
+  if (fs.existsSync(path)) {
     try {
       // fs.createReadStream(path, { encoding: 'utf-8' })
       // .on('data', (data) => {
@@ -51,9 +51,9 @@ const countStudents = (path) => {
 	    reject(error)
       //console.log(error);
     }
- // } else {
-   // throw new Error('Cannot load the database');
-  //}
+ } else {
+     throw new Error('Cannot load the database');
+  }
 	//	resolve()
 	})
 };
