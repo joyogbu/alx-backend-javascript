@@ -6,10 +6,11 @@ const result = [];
 let output;
 if (fs.existsSync(path)) {
 try {
-fs.createReadStream(path, { encoding: 'utf-8' })
+//fs.createReadStream(path, { encoding: 'utf-8' })
   //.pipe(csv())
   //.on('data', (data) => result.push(data))
-  .on('data', (data) => {
+  //.on('data', (data) => {
+	const data = fs.readFileSync(path, 'utf8')
 	  const lines = data.split('\n');
 	  const mylines = lines.filter(function(elem) {
 		 return elem.trim() !== ''
@@ -31,28 +32,10 @@ fs.createReadStream(path, { encoding: 'utf-8' })
 		  }, {});
 	  })
 	  //console.log(output)
-  })
-  .on('end', () => {
+ // })
+  //.on('end', () => {
 	  //console.log(result)
     console.log(`Number of students: ${output.length}`)
-	  //let elem ={}
-	  /*const item = result.reduce((item, y) => {
-		  return item[y.field] = result.filter((res) => res.field === y.field)
-		  //return item
-	  });*/
-	  
-			  /*item.reduce((x, z) => {
-			  const field = (elem[z.field] || [])
-			  field.push(z)
-			  elem[z.field] = field*/
-			  //return elem
-		  //});
-	 // });
-	  //return item
-	  //console.log(item)
-	  //console.log(result)
-
-
 	const elements = output.reduce((elements, x) => {
 		const field = (elements[x.field] || [])
 		field.push(x)
@@ -67,7 +50,7 @@ fs.createReadStream(path, { encoding: 'utf-8' })
 		 //console.log(`List: ${fnames.join(', ')}`)
 	 }
 
-  });
+  //});
 	
 } catch(error) {
 	console.log(error)
